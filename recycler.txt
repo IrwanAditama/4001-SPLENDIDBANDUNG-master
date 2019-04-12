@@ -1,0 +1,49 @@
+package com.example.android.splendidbandung;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
+import java.util.ArrayList;
+
+public class HotPlacesMain extends AppCompatActivity {
+
+private RecyclerView recyclerView;
+private HotPlacesAdapter adapter;
+private ArrayList<HotPlaces> HotPlacesArrayList;
+
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        addData();
+
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerview_id);
+
+        adapter = new HotPlacesAdapter(HotPlacesArrayList);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(HotPlacesMain.this);
+
+        recyclerView.setLayoutManager(layoutManager);
+
+        recyclerView.setAdapter(adapter);
+    }
+    void addData(){
+
+        HotPlacesArrayList.add(new HotPlaces("asdasd","","asdasd"));
+        HotPlacesArrayList.add(new HotPlaces("asdasd","","asdasd"));
+        HotPlacesArrayList.add(new HotPlaces("asdasd","","asdasd"));
+        HotPlacesArrayList.add(new HotPlaces("asdasd","","asdasd"));
+        HotPlacesArrayList.add(new HotPlaces("asdasd","","asdasd"));
+        HotPlacesArrayList.add(new HotPlaces("asdasd","","asdasd"));
+        HotPlacesArrayList.add(new HotPlaces("asdasd","","asdasd"));
+        HotPlacesArrayList.add(new HotPlaces("asdasd","","asdasd"));
+        HotPlacesArrayList.add(new HotPlaces("asdasd","","asdasd"));
+
+
+}
+
+}
